@@ -26,7 +26,7 @@ const Checkout = ({ event, userId }: { event: IEvent; userId: string }) => {
     const order = {
       eventTitle: event.title,
       eventId: event._id,
-      price: event.price, // Set a default value of 0 if event.price is undefined
+      price: event.price || "0",
       isFree: event.isFree,
       buyerId: userId,
     };
